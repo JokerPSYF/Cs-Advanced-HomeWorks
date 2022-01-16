@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.PrimaryDiagonal", "3.Prim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.SymbolInMatrix", "4.SymbolInMatrix\4.SymbolInMatrix.csproj", "{81B14E50-7E71-471F-9F38-FB63E3C7616F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.SquareWithMaximumSum", "5.SquareWithMaximumSum\5.SquareWithMaximumSum.csproj", "{BB137527-CCB1-4B53-B624-F31335E1DF08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.Jagged-ArrayModification", "6.Jagged-ArrayModification\6.Jagged-ArrayModification.csproj", "{D57DE421-1BD0-4693-B2AC-B97250C78DB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{81B14E50-7E71-471F-9F38-FB63E3C7616F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81B14E50-7E71-471F-9F38-FB63E3C7616F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81B14E50-7E71-471F-9F38-FB63E3C7616F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB137527-CCB1-4B53-B624-F31335E1DF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB137527-CCB1-4B53-B624-F31335E1DF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB137527-CCB1-4B53-B624-F31335E1DF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB137527-CCB1-4B53-B624-F31335E1DF08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57DE421-1BD0-4693-B2AC-B97250C78DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57DE421-1BD0-4693-B2AC-B97250C78DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57DE421-1BD0-4693-B2AC-B97250C78DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57DE421-1BD0-4693-B2AC-B97250C78DB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
