@@ -14,7 +14,7 @@ namespace _4.MatrixShuffling
             {
                 string[] input = Console.ReadLine()
                     .Split(" ", StringSplitOptions.RemoveEmptyEntries);
-               
+
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
                     matrix[row, col] = input[col];
@@ -53,7 +53,7 @@ namespace _4.MatrixShuffling
         {
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
- 
+
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
                     Console.Write(matrix[row, col] + " ");
@@ -63,10 +63,10 @@ namespace _4.MatrixShuffling
             }
         }
 
-        private static bool IsRange(string[,] matrix, int row, int col)
+        static bool IsRange(string[,] matrix, int row, int col)
         {
-           bool isTrue = row < matrix.GetLength(0) && col < matrix.GetLength(1)
-                                               && row >= 0 && col >= 0;
+            bool isTrue = row < matrix.GetLength(0) && col < matrix.GetLength(1)
+                                                && row >= 0 && col >= 0;
             return isTrue;
         }
     }
