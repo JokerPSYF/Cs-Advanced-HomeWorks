@@ -5,66 +5,51 @@ using System.Linq;
 
 namespace WordCount
 {
-    class WordCount
+    public class WordCount
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            string wordsFilePath = @"../../../words.txt";
+            string wordsFilePath = @"..\..\..\words.txt";
             string textFilePath = @"..\..\..\text.txt";
             string outputFilePath = @"..\..\..\output.txt";
 
-            Dictionary<string, int> finalDic = CalculateWordCounts(wordsFilePath, textFilePath, outputFilePath);
-            using (StreamWriter writer = new StreamWriter(outputFilePath))
-            {
-                foreach (var word in finalDic.OrderByDescending(x => x.Value))
-                {
-                    writer.WriteLine($"{word.Key} - {word.Value}");
-                }
-            }
+            CalculateWordCounts(wordsFilePath, textFilePath, outputFilePath);
         }
 
-        public static Dictionary<string, int> CalculateWordCounts(string wordsFilePath, string textFilePath, string outputFilePath)
+        public static void CalculateWordCounts(string wordsFilePath, string textFilePath, string outputFilePath)
         {
-            Dictionary<string, int> words = new Dictionary<string, int>();
+            Dictionary<string, int> counter = new Dictionary<string, int>();
 
-            using (StreamReader wordsReader = new StreamReader(wordsFilePath))
+            string[] words = File.ReadAllLines(wordsFilePath);
+            string[] word = words[0].ToLower().Split();
+            string[] text = File.ReadAllLines(textFilePath);
+
+            for (int i = 0; i < word.Length; i++)
             {
-
-                string[] strArray = wordsReader.ReadLine().Split();
-
-                using (StreamReader textReader = new StreamReader(textFilePath))
+                counter.Add(word[i].ToLower(), 0);
+                for (int j = 0; j < text.Length; j++)
                 {
-                    StreamWriter writer = new StreamWriter(outputFilePath);
-
-
-                    string[] line = textReader.ReadLine()
+                    string[] currLine = text[j]
                         .ToLower()
-                        .Split(new[] { ' ', '.', ',', '-', '?', '!', ':', ';' });
-
-                    while (line != null)
+                        .Split(new char[] { '-', '.', ' ', ',', '!', '?' }
+                            , StringSplitOptions.RemoveEmptyEntries);
+                    for (int k = 0; k < currLine.Length; k++)
                     {
-                        foreach (string word in strArray)
+                        if (word[i] == currLine[k])
                         {
-                            foreach (string item in line)
-                            {
-                                if (word == item && words.ContainsKey(word))
-                                {
-                                    words[word]++;
-                                }
-                                else if (word == item && !words.ContainsKey(word))
-                                {
-                                    words.Add(word, 1);
-                                }
-                            }
+                            counter[word[i]]++;
                         }
-
-                        line = textReader.ReadLine()
-                            .ToLower()
-                            .Split(new[] { ' ', '.', ',', '-', '?', '!', ':', ';' });
                     }
                 }
             }
-            return words;
+
+            using (StreamWriter writer = new StreamWriter(outputFilePath))
+            {
+                foreach (var pair in counter.OrderByDescending(x => x.Value))
+                {
+                    writer.WriteLine($"{pair.Key} - {pair.Value}");
+                }
+            }
         }
     }
 }
