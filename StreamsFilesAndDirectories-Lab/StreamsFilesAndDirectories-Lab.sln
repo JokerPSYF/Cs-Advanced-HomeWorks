@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtractBytes", "ExtractByte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitMergeBinaryFiles", "SplitMergeBinaryFiles\SplitMergeBinaryFiles.csproj", "{E0A71A6D-5E3E-422D-80FA-E6AB78AF42BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderSize", "FolderSize\FolderSize.csproj", "{3581A672-651B-4303-AC68-CA86972C64EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E0A71A6D-5E3E-422D-80FA-E6AB78AF42BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0A71A6D-5E3E-422D-80FA-E6AB78AF42BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0A71A6D-5E3E-422D-80FA-E6AB78AF42BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3581A672-651B-4303-AC68-CA86972C64EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3581A672-651B-4303-AC68-CA86972C64EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3581A672-651B-4303-AC68-CA86972C64EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3581A672-651B-4303-AC68-CA86972C64EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
