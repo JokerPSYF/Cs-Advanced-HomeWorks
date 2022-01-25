@@ -36,7 +36,7 @@ namespace EvenLines
                     line = reader.ReadLine();
                 }
 
-                return builder.ToString();
+                return builder.ToString().Trim();
             }
         }
         public static string ReverseWords(string replacedSymbols)
