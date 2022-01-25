@@ -8,7 +8,7 @@ namespace EvenLines
     using System;
     public class EvenLines
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string inputFilePath = @"..\..\..\text.txt";
 
@@ -39,13 +39,13 @@ namespace EvenLines
                 return builder.ToString();
             }
         }
-        private static string ReverseWords(string replacedSymbols)
+        public static string ReverseWords(string replacedSymbols)
         {
             replacedSymbols = string.Join(" ", replacedSymbols.Split().Reverse());
             return replacedSymbols;
         }
 
-        private static string ReplaceSymbols(string line)
+        public static string ReplaceSymbols(string line)
         {
             char[] symbols = new[] { '-', ',', '.', '!', '?' };
             foreach (char symbol in symbols)
