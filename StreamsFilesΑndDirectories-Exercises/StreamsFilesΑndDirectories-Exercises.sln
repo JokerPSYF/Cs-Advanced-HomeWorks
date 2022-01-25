@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryTraversal", "Direc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyDirectory", "CopyDirectory\CopyDirectory.csproj", "{D9FF4D63-B301-4051-8E70-47233458CA34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipAndExtract", "ZipAndExtract\ZipAndExtract.csproj", "{2918CD83-0EEB-4981-8400-5F616B648EF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D9FF4D63-B301-4051-8E70-47233458CA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9FF4D63-B301-4051-8E70-47233458CA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9FF4D63-B301-4051-8E70-47233458CA34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2918CD83-0EEB-4981-8400-5F616B648EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2918CD83-0EEB-4981-8400-5F616B648EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2918CD83-0EEB-4981-8400-5F616B648EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2918CD83-0EEB-4981-8400-5F616B648EF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
