@@ -35,3 +35,7 @@ namespace ZipAndExtract
         }
     }
 }
+//Write a program that creates a ZIP file (archive),
+//holding a given input file, and extracts the ZIP-ed file from the archive into in separate output file.
+//    Use the copyMe.png file from your resources as input and zip it into a ZIP file of your choice, e. g. archive.zip.
+//    Extract the file from the archive into a new file of your choice, e. g. extracted.png.
