@@ -6,21 +6,14 @@ namespace CarManufacturer
     {
         public static void Main(string[] args)
         {
-            Car car = new Car();
+            Tire[] tires = new Tire[4]
+            {
+                new Tire(1, 2.5), new Tire(1, 2.1), new Tire(2, 0.5), new Tire(2, 2.3)
+            };
 
-            car.Make = "VW";
-            car.Model = "MK3";
-            car.Year = 1992;
+            Engine engine = new Engine(560, 6300);
 
-            Console.WriteLine($"Make: {car.Make}\nModel: {car.Model}\nYear: {car.Year}");
+            Car car = new Car("Lamborghini", "Urus", 2010, 250, 9, engine, tires);
         }
     }
 }
-//Create a class named Car.The class should have private fields for:
-//    make: string
-//    model: string
-//    year: int
-//    The class should also have public properties for:
-//    Make: string
-//    Model: string
-//    Year: int
