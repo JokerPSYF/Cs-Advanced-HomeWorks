@@ -15,5 +15,11 @@
             this.Year = year;
             this.Pressure = pressure;
         }
+
+        public Tire()
+        {
+            this.Year = 0;
+            this.Pressure = 0;
+        }
     }
 }

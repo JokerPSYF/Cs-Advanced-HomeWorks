@@ -40,24 +40,6 @@ namespace CarManufacturer
 
         //CONSTRUCTOR
 
-        public void Drive(double distance)
-        {
-            if (fuelQuantity - distance * fuelConsumption > 0)
-            {
-                fuelQuantity -= distance * fuelConsumption;
-            }
-            else
-            {
-                Console.WriteLine("Not enough fuel to perform this trip!");
-            }
-        }
-
-        public string WhoAmI()
-        {
-            string youAre = $"Make: {this.Make} Model: { this.Model} Year: { this.Year} Fuel: { this.FuelQuantity:F2} ";
-            return youAre;
-        }
-
         public Car()
         {
             this.Make = "VW";
@@ -86,6 +68,37 @@ namespace CarManufacturer
         {
             Engine = engine;
             Tires = tires;
+        }
+
+        //METHODS
+
+        public void Drive(double distance)
+        {
+            if (FuelQuantity - (FuelConsumption * distance / 100) >= 0)
+            {
+                fuelQuantity -= distance * fuelConsumption / 100;
+            }
+            else
+            {
+                Console.WriteLine("Not enough fuel to perform this trip!");
+            }
+        }
+
+        public string WhoAmI()
+        {
+            StringBuilder youAre = new StringBuilder();
+
+            youAre.AppendLine($"Make: {this.Make}");
+
+            youAre.AppendLine($"Model: { this.Model}");
+
+            youAre.AppendLine($"Year: { this.Year}");
+
+            youAre.AppendLine($"HorsePowers: {this.Engine.HorsePower}");
+
+            youAre.AppendLine($"FuelQuantity: {this.FuelQuantity}");
+
+            return youAre.ToString();
         }
     }
 }
