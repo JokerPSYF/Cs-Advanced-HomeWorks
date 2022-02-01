@@ -24,10 +24,10 @@
             this.name = name;
         }
 
-        //public override string ToString()
-        //{
-        //    string str = $"Name: {name} Age: {age}";
-        //    return str;
-        //}
+        public override string ToString()
+        {
+            string str = $"{name} {age}";
+            return str;
+        }
     }
 }
