@@ -6,7 +6,7 @@ namespace CreateCustomDataStructures
     {
         static void Main(string[] args)
         {
-            CustomList list = new CustomList();
+            CustomList<int> list = new CustomList<int>();
             for (int i = 1; i < 50; i++)
             {
                 list.Add(i);

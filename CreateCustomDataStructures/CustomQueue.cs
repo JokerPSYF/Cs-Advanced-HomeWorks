@@ -2,13 +2,13 @@
 
 namespace CreateCustomDataStructures
 {
-    public class CustomQueue
+    public class CustomQueue<T>
     {
         private const int initialCapacity = 4;
 
         private const int firstElementIndex = 0;
 
-        private int[] items;
+        private T[] items;
 
         private int count;
 
@@ -17,10 +17,10 @@ namespace CreateCustomDataStructures
         public CustomQueue()
         {
             count = 0;
-            items = new int[initialCapacity];
+            items = new T[initialCapacity];
         }
 
-        public void Enqueue(int element)
+        public void Enqueue(T element)
         {
             if (Count == 0) throw new ArgumentOutOfRangeException("The queue is empty");
 
@@ -31,19 +31,19 @@ namespace CreateCustomDataStructures
             count++;
         }
 
-        public int Dequeue()
+        public T Dequeue()
         {
             if (Count == 0) throw new ArgumentOutOfRangeException("The queue is empty");
 
             if (Count <= items.Length / 4) Shrink();
 
-            int removeThat = items[firstElementIndex];
+            T removeThat = items[firstElementIndex];
             ShiftToLeft();
             count--;
             return removeThat;
         }
 
-        public int Peek()
+        public T Peek()
         {
             if (Count == 0) throw new ArgumentOutOfRangeException("The queue is empty");
 
@@ -54,7 +54,7 @@ namespace CreateCustomDataStructures
         {
             if (Count == 0) throw new ArgumentOutOfRangeException("The queue is already empty");
 
-            items = new int[initialCapacity];
+            items = new T[initialCapacity];
         }
 
         private void ShiftToRight()
@@ -85,7 +85,7 @@ namespace CreateCustomDataStructures
 
         private void Resize()
         {
-            int[] newArr = new int[items.Length * 2];
+            T[] newArr = new T[items.Length * 2];
 
             for (int i = 0; i < items.Length; i++)
             {
@@ -97,7 +97,7 @@ namespace CreateCustomDataStructures
 
         private void Shrink()
         {
-            int[] newArr = new int[items.Length / 2];
+            T[] newArr = new T[items.Length / 2];
 
             for (int i = 0; i < Count; i++)
             {

@@ -3,11 +3,11 @@ using System.Text;
 
 namespace CreateCustomDataStructures
 {
-    public class CustomList
+    public class CustomList<T>
     {
         private const int constCapacity = 2;
 
-        private int[] items;
+        private T[] items;
 
         public int Count { get; private set; }
 
@@ -15,10 +15,10 @@ namespace CreateCustomDataStructures
 
         public CustomList()
         {
-            items = new int[constCapacity];
+            items = new T[constCapacity];
         }
 
-        public int this[int index]
+        public T this[int index]
         {
             get
             {
@@ -42,7 +42,7 @@ namespace CreateCustomDataStructures
 
         private void Resize()
         {
-            int[] newArr = new int[items.Length * 2];
+            T[] newArr = new T[items.Length * 2];
 
             for (int i = 0; i < items.Length; i++)
             {
@@ -52,7 +52,7 @@ namespace CreateCustomDataStructures
             items = newArr;
         }
 
-        public void Add(int element)
+        public void Add(T element)
         {
             if (Count == items.Length)
             {
@@ -73,7 +73,7 @@ namespace CreateCustomDataStructures
 
         private void Shrink()
         {
-            int[] newArr = new int[items.Length / 2];
+            T[] newArr = new T[items.Length / 2];
 
             for (int i = 0; i < Count; i++)
             {
@@ -83,15 +83,15 @@ namespace CreateCustomDataStructures
             items = newArr;
         }
 
-        public int RemoveAt(int index)
+        public T RemoveAt(int index)
         {
             if (index >= Count || index < 0)
             {
                 throw new ArgumentOutOfRangeException();
             }
 
-            int removeThat = items[index];
-            items[index] = default(int);
+            T removeThat = items[index];
+            items[index] = default(T);
             Shift(index);
             Count--;
             if (Count <= items.Length / 4)
@@ -110,7 +110,7 @@ namespace CreateCustomDataStructures
             }
         }
 
-        public void Insert(int index, int element)
+        public void Insert(int index, T element)
         {
             if (index > Count)
             {
@@ -128,11 +128,11 @@ namespace CreateCustomDataStructures
             Count++;
         }
 
-        public bool Contains(int element)
+        public bool Contains(T element)
         {
             for (int i = 0; i < Count; i++)
             {
-               if (items[i] == element) return true;
+               if (items[i].Equals(element)) return true;
             }
 
             return false;
@@ -140,18 +140,18 @@ namespace CreateCustomDataStructures
 
         public void Swap(int firstIndex, int secondIndex)
         {
-            int temp = items[firstIndex];
+            T temp = items[firstIndex];
 
             items[firstIndex] = items[secondIndex];
 
             items[secondIndex] = temp;
         }
 
-        public int Find(int element)
+        public int Find(T element)
         {
             for (int i = 0; i < Count; i++)
             {
-                if (items[i] == element)
+                if (items[i].Equals(element))
                 {
                     return i;
                 }
@@ -161,7 +161,7 @@ namespace CreateCustomDataStructures
 
         public void Reverse()
         {
-            int[] newArr = new int[items.Length];
+            T[] newArr = new T[items.Length];
             for (int i = 0; i < Count; i++)
             {
                 newArr[i] = items[Count - i];

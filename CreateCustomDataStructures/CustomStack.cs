@@ -4,11 +4,11 @@ using System.Text;
 
 namespace CreateCustomDataStructures
 {
-    class CustomStack
+    class CustomStack<T>
     {
         private const int initialCapacity = 4;
 
-        private int[] items;
+        private T[] items;
 
         private int count;
 
@@ -18,10 +18,10 @@ namespace CreateCustomDataStructures
         {
             Count = 0;
 
-            items = new int[initialCapacity];
+            items = new T[initialCapacity];
         }
 
-        public void Push(int element)
+        public void Push(T element)
         {
             if (items.Length == Count)
             {
@@ -32,14 +32,14 @@ namespace CreateCustomDataStructures
             Count++;
         }
 
-        public int Pop()
+        public T Pop()
         {
             if (Count == 0)
             {
                 throw new ArgumentOutOfRangeException("The stack is empty");
             }
-            int removeThat = items[Count - 1];
-            items[Count - 1] = default(int);
+            T removeThat = items[Count - 1];
+            items[Count - 1] = default(T);
             Count--;
 
             if (Count <= items.Length / 4)
@@ -50,14 +50,14 @@ namespace CreateCustomDataStructures
             return removeThat;
         }
 
-        public int Peek()
+        public T Peek()
         {
             if (Count == 0 )
             {
                 throw new ArgumentOutOfRangeException("The stack is empty");
             }
 
-            int giveMeThat = items[Count - 1];
+            T giveMeThat = items[Count - 1];
             return giveMeThat;
         }
 
@@ -71,7 +71,7 @@ namespace CreateCustomDataStructures
 
         private void Resize()
         {
-            int[] newArr = new int[items.Length * 2];
+            T[] newArr = new T[items.Length * 2];
 
             for (int i = 0; i < items.Length; i++)
             {
@@ -83,7 +83,7 @@ namespace CreateCustomDataStructures
 
         private void Shrink()
         {
-            int[] newArr = new int[items.Length / 2];
+            T[] newArr = new T[items.Length / 2];
 
             for (int i = 0; i < Count; i++)
             {
