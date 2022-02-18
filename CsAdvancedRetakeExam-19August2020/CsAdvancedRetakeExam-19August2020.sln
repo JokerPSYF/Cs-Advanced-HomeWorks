@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic", "VetClinic\VetClinic.csproj", "{9616DA83-EFDD-4145-A00E-BC94AC6CB040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetClinic", "VetClinic\VetClinic.csproj", "{9616DA83-EFDD-4145-A00E-BC94AC6CB040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Bee", "02.Bee\02.Bee.csproj", "{CDD1863B-60E7-4619-BFDD-5AA754C2B405}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Bee", "02.Bee\02.Bee.csproj", "{CDD1863B-60E7-4619-BFDD-5AA754C2B405}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.FlowerWreaths", "01.FlowerWreaths\01.FlowerWreaths.csproj", "{74CDBC0C-B997-4C70-B95C-F56363D67B25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CDD1863B-60E7-4619-BFDD-5AA754C2B405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD1863B-60E7-4619-BFDD-5AA754C2B405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD1863B-60E7-4619-BFDD-5AA754C2B405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74CDBC0C-B997-4C70-B95C-F56363D67B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74CDBC0C-B997-4C70-B95C-F56363D67B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74CDBC0C-B997-4C70-B95C-F56363D67B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74CDBC0C-B997-4C70-B95C-F56363D67B25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
