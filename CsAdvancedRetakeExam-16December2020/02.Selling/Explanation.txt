@@ -11,7 +11,7 @@ Each turn, you will be given commands for the your movement. Move commands will 
 you collects the price equal to the digit there and the client disappears.
 If you move to a pillar, you move on the position of the other pillar and then both pillars disappear.
 If you go out of the bakery, you disappear from the bakery and you are out of there.
-You need at least 50 dollars to rent your own Bakery
+ You need at least 50 dollars to rent your own Bakery
 When you are out of the bakery or you collect enough money, the program ends.
 Input
 On the first line, you are given the integer n – the size of the square matrix.
