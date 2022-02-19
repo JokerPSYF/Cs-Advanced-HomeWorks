@@ -16,13 +16,13 @@ namespace _02.Snake
 
             int snakeCol = default;
 
-            int firstBorrowRow = default;
+            int firstBorrowRow = -1;
 
-            int firstBorrowCol = default;
+            int firstBorrowCol = -1;
 
-            int secondBorrowRow = default;
+            int secondBorrowRow = -1;
 
-            int secondBorrowCol = default;
+            int secondBorrowCol = -1;
 
             bool IsLost = false;
 
@@ -40,9 +40,9 @@ namespace _02.Snake
                     matrix[rows, cols] = input[cols];
                     if (input[cols] == 'S') snakeCol = cols;
 
-                    if (input[cols] == 'B')
+                    else if (input[cols] == 'B')
                     {
-                        if (firstBorrowRow == default)
+                        if (firstBorrowRow == -1)
                         {
                             firstBorrowRow = rows;
                             firstBorrowCol = cols;
